@@ -2166,7 +2166,7 @@ sub createcredentialobject{
 }
 
 #If you need to change the location of the SharpView assembly
-$sharviewlocation = "/SharpView.exe";
+$sharviewlocation = "post/SharpView.exe";
 
 #---------------
 #Misc Functions
