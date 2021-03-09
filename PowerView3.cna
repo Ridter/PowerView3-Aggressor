@@ -16,6 +16,20 @@
 
 popup beacon_top {
     menu "PowerView 3.0" {
+        item "Load Powerview"{
+                local('$bid');
+                foreach $bid ($1){
+                    blog($1,"Import PowerView");
+                    bpowershell_import!($1, script_resource("scripts/PowerView.ps1"));
+                }
+            }
+        item "Load Powerview-RBCD"{
+                local('$bid');
+                foreach $bid ($1){
+                    blog($1,"Import PowerView RBCD");
+                    bpowershell_import!($1, script_resource("scripts/PowerView_RBCD.ps1"));
+                }
+            }
         menu "Misc Functions"{
             item "Export-PowerViewCSV"{
                 local('$bid');
